@@ -6,22 +6,20 @@ TestCase2 = [3 2 4]
 TestCase3 = [3 3]
 
 declare TwoSum
-fun {TwoSum Numbers Target} Seen I in
-    local RecursiveFinder in
-        fun {RecursiveFinder Numbers Target Seen I}
-            case Numbers of N | Rest then
-                if {Dictionary.member Seen Target-N} then
-                    {Dictionary.get Seen Target-N}#I
-                else
-                    {Dictionary.put Seen N I}
-                    {RecursiveFinder Rest Target Seen I+1}
-                end
+fun {TwoSum Numbers Target} Seen I RecursiveFinder in
+    fun {RecursiveFinder Numbers Target Seen I}
+        case Numbers of N | Rest then
+            if {Dictionary.member Seen Target-N} then
+                {Dictionary.get Seen Target-N}#I
             else
-                ~1#~1
+                {Dictionary.put Seen N I}
+                {RecursiveFinder Rest Target Seen I+1}
             end
+        else
+            ~1#~1
         end
-        {RecursiveFinder Numbers Target {NewDictionary} 0}
     end
+    {RecursiveFinder Numbers Target {NewDictionary} 0}
 end
 
 {Browse {TwoSum TestCase1 9}}
