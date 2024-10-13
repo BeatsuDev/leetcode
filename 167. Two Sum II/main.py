@@ -1,6 +1,21 @@
 from typing import List
 
 
+# Time complexity: O(n)
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        i, j = 0, len(numbers)-1
+
+        while j > i:
+            two_sum = numbers[i] + numbers[j]
+            if two_sum > target:
+                j -= 1
+            elif two_sum < target:
+                i += 1
+            else:
+                return i+1, j+1
+
+
 # Time complexity: O(n log(n))
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
