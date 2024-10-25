@@ -1,15 +1,15 @@
 declare Solution
 fun {Solution Input} InnerLoop in
     fun {InnerLoop Left Right LargestSoFar} CurrentContainerSize in
-        if Left >= Right then
-            LargestSoFar
-        else
+        if Left < Right then
             CurrentContainerSize = {Min {List.nth Input Left} {List.nth Input Right}} * (Right - Left)
             if {List.nth Input Left} < {List.nth Input Right} then
                 {InnerLoop Left+1 Right {Max LargestSoFar CurrentContainerSize}}
             else
                 {InnerLoop Left Right-1 {Max LargestSoFar CurrentContainerSize}}
             end
+        else
+            LargestSoFar
         end
     end
 
