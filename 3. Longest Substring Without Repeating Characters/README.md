@@ -8,10 +8,12 @@ Avoid resetting/clearing data if you don't have to.
 
 ## Solving the task
 
-Initialize an array of size $255$ with all values set to $-1$. This will be used as a lookup table where the value at index $char_{int}$ equal to the integer value of a character $char$ is the index at which $char$ last occurs.
+Assume the longest sequence of unique characters begins at the start of the string until we find a character at index $j$ that matches with a previous character in the string at index $i$. After that we check for a longer unique sequence at $i+1$. We know that any index before $i$ can not have a longer distinct sequence of characters than $j-i$ because any longer sequence than the one we have already found would include the characters at index $j$ and $i$ (which are duplicates) within them.
 
-> ![Visualization of a simple input and the state of the lookup table](media/image.png)
+> ```
+>  z a b c d e a f
+>    i         j
+> |---- L ----|
+> ```
 >
-> Here is an example of how the lookup table looks like after adding all characters of the input into the lookup table.
-
-We need two pointers (variables tracking indices of the input string). One ($left$) will denote the beginning index of a potential sequence of distinct characters and the other ($right$) that will iterate over all characters and check if they have been seen within the interval $[left,  right)$ of the input string. If the character at index $right$ lies outside of the interval $[left, right)$, we simply set the value at the index equal to the integer value of the character at $right$ to be the $right$ (see the figure drawing above) and then increment $right$. If the we have seen the character within the interval, we can move the left pointer to the index _after_ the index at which the duplicate character occured.
+> If the range $L$ is any larger, the duplicates $i$ and $j$ will be included in the range and will not be valid.
