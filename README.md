@@ -2,9 +2,9 @@
 
 The difficulty rating is my subjective experience of how difficult it was at the time of solving it.
 
--   1-4: Fairly easy task. (<15 min total)
--   5-7: Quite difficult. (15 min - 1 hour)
--   8-10: Very difficult. (1 hour - 3 hours)
+-   1-4: Fairly easy task. (<30 min total)
+-   5-7: Quite difficult. (30 min - 2 hours)
+-   8-10: Very difficult. (2 hours - 4 hours+)
 
 |  No. | Name                                           | Notes                           | Difficulty |                               Solution                                |
 | ---: | ---------------------------------------------- | ------------------------------- | :--------: | :-------------------------------------------------------------------: |
