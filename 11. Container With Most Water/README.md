@@ -6,7 +6,7 @@ Start with a best guess solution, then look at how you can improve from that cas
 
 It's similar to [853. Car Fleet](/853.%20Car%20Fleet/) or [28. Needle in Haystack](/28.%20Needle%20in%20Haystack/) where you start with a best guess (for the other tasks, this might just have to be $0$) and then keep iterating to try find a larger value to improve that initial guess.
 
-## Solving Container With Most Water
+## Solving the task
 
 We want to maximize the area, meaning we want to maximize the X-distance and height. Start with a base case where we maxmize the X-distance by choosing the first and last height to create an area. From here, we search for a better case by moving away from the smaller height of these two and towards the middle. It's the smaller height that is "limiting" the height we can use for finding the area, and thus from finding a better solution.
 
