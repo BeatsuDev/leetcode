@@ -2,7 +2,9 @@
 
 ## Learning take-aways
 
-In this task, we started with pointers at each end, maximizing the X-axis value. We then try to improve the smallest of the two - trying to find a value that increases the smallest value of these. It's similar to [853. Car Fleet](/853.%20Car%20Fleet/) or [28. Needle in Haystack](/28.%20Needle%20in%20Haystack/) where you keep iterating to try and find a larger value to improve. The only difference is that here there are two pointers, not one.
+Start with a best guess solution, then look at how you can improve from that case. Are there any choices that can ONLY make things worse? (e.g. moving the tallest height in this problem).
+
+It's similar to [853. Car Fleet](/853.%20Car%20Fleet/) or [28. Needle in Haystack](/28.%20Needle%20in%20Haystack/) where you start with a best guess (for the other tasks, this might just have to be $0$) and then keep iterating to try find a larger value to improve that initial guess.
 
 ## Solving Container With Most Water
 
