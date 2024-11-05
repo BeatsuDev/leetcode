@@ -16,4 +16,4 @@ Assume the longest sequence of unique characters begins at the start of the stri
 > |---- L ----|
 > ```
 >
-> If the range $L$ is any larger, the duplicates $i$ and $j$ will be included in the range and will not be valid.
+> If the range $L$ is any larger, the duplicates $i$ and $j$ will be included in the range and will not be valid. We have already checked for duplicates in all characters in the range $L$, so we know that there are no duplicates after $i$ up to and including $j$. That's why we can move the start of range $L$ to $i+1$ and then continue moving the end of $L$ from where it is.
