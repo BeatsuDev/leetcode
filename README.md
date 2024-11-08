@@ -16,3 +16,4 @@ The difficulty rating is my subjective experience of how difficult it was at the
 | 153. | Find Minimum in Rotated Sorted Array           |                                            |    1/10    |    [Link](/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/)    |
 | 853. | Car Fleet                                      |                                            |    6/10    |                     [Link](/853.%20Car%20Fleet/)                      |
 | 875. | Koko Eating Bananas                            | I already knew it was a binary-search task |    2/10    |               [Link](/875.%20Koko%20Eating%20Bananas/)                |
+| 981. | Time Based Key-Value Store                     |                                            |    1/10    |           [Link](/981.%20Time%20Based%20Key-Value%20Store/)           |
